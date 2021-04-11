@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MoviesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts/index');
-});
+Route::get('/', [MoviesController::class, 'index'])->name('movies.index');
+Route::get('/movies/{movie}', [MoviesController::class, 'show'])->name('movies.show');
 
-Route::view('/movie', 'layouts/show');
+// Route::view('/', 'layouts/show');
+// Route::view('/movie', 'index/show');
