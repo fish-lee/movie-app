@@ -33,7 +33,7 @@ class MoviesController extends Controller
             $genres
         );
 
-        return view('layouts.index', $viewModel);
+        return view('movies.index', $viewModel);
     }
 
     /**
@@ -73,7 +73,7 @@ class MoviesController extends Controller
             $movie,
         );
 
-        return view('layouts/show', $viewModel);
+        return view('movies.show', $viewModel);
     }
 
     /**
