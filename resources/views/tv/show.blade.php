@@ -4,7 +4,7 @@
     <div class="tv-info border-b border-gray-800">
         <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
             <div class="flex-none">
-                <img src="{{ $tvshow['poster_path'] }}" alt="parasite" class="w-64 lg:w-96">
+                <img src="{{ $tvshow['poster_path'] }}" alt="poster" class="w-64 lg:w-96">
             </div>
             <div class="md:ml-24">
                 <h2 class="text-4xl mt-4 md:mt-0 font-semibold">{{ $tvshow['name'] }}</h2>
@@ -55,6 +55,7 @@
                                         <div class="flex justify-end pr-4 pt-2">
                                             <button
                                                 @click="open = false"
+                                                @click.away="open = false"
                                                 @keydown.escape.window="open = false"
                                                 class="text-3xl leading-none hover:text-gray-300">&times;
                                             </button>

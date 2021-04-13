@@ -56,6 +56,7 @@
                                         <div class="flex justify-end pr-4 pt-2">
                                             <button
                                                 @click="open = false"
+                                                @click.away="open = false"
                                                 @keydown.escape.window="open = false"
                                                 class="text-3xl leading-none hover:text-gray-300">&times;
                                             </button>
